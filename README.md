@@ -18,6 +18,7 @@
 - [数据结构](#数据结构)
 - [使用示例](#使用示例)
 - [样式定制](#样式定制)
+- [效果展示](#效果展示)
 - [常见问题](#常见问题)
 
 ## 🎯 组件属性
@@ -160,10 +161,18 @@ interface Position {
     @editTaskCallback="editTaskCallback"
   >
     <template #header>
+      <!-- 可以自定义头部 -->
       <div class="header-btn">
-        <i class="las la-play-circle" @click="() => play()"></i>
-        <i class="las la-pause-circle" @click="() => pause()"></i>
-        <i class="las la-undo-alt" @click="() => reset()"></i>
+        <div class="header-btn-l">
+          <i class="las la-play-circle" @click="() => play()"></i>
+          <i class="las la-pause-circle" @click="() => pause()"></i>
+          <i class="las la-undo-alt" @click="() => reset()"></i>
+        </div>
+        <div class="header-btn-r">
+          <i class="las la-sort-down" @click="fold"></i>
+          <i class="las la-expand" @click="fullScreenFold(0)"></i>
+          <i class="las la-expand-arrows-alt" @click="fullScreen"></i>
+        </div>
       </div>
     </template>
   </bim-time-line-container>
@@ -184,6 +193,9 @@ interface Position {
 2. 任务 ID 必须唯一
 3. 父级 ID 数组用于构建任务层级关系
 4. 任务属性（attr）根据不同类型可以包含不同的配置项
+5. 所有任务右键触发菜单（播放期间不能触发）
+6. 日期双击或者右键能添加视点
+7. 插件高度 354px
 
 ## 🎨 样式定制
 
@@ -207,6 +219,7 @@ body .mars3d-container {
   align-items: center;
   height: 100%;
   padding: 0 10px;
+  justify-content: space-between;
 }
 
 .header-btn i {
@@ -216,6 +229,14 @@ body .mars3d-container {
   cursor: pointer;
 }
 ```
+
+## 🖼️ 效果展示
+
+<div align="center">
+  <img src="/public/screenshot.png" alt="Timeline组件效果图" width="800"/>
+  <img src="/public/screenshot2.png" alt="Timeline组件效果图" width="800"/>
+  <br/>
+</div>
 
 ## ❓ 常见问题
 
@@ -243,8 +264,7 @@ body .mars3d-container {
 ---
 
 <div align="center">
-
-有什么问题请提 issue，或者加微信：18971126088
-![wechat](URL_ADDRESS![wechat](https://github.com/CHBIM/CHBIM/blob/main/wechat.png)
+此模板示例使用的是<a href="https://www.npmjs.com/package/mars3d">mars3d</a>搭建
+有什么问题请提 issue，或者加微信：astronauts_in_space，欢迎交流。
 
 </div>

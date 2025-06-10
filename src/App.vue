@@ -24,9 +24,16 @@
   >
     <template #header>
       <div class="header-btn">
-        <i class="las la-play-circle" @click="() => play()"></i>
-        <i class="las la-pause-circle" @click="() => pause()"></i>
-        <i class="las la-undo-alt" @click="() => reset()"></i>
+        <div class="header-btn-l">
+          <i class="las la-play-circle" @click="() => play()"></i>
+          <i class="las la-pause-circle" @click="() => pause()"></i>
+          <i class="las la-undo-alt" @click="() => reset()"></i>
+        </div>
+        <div class="header-btn-r">
+          <i class="las la-sort-down" @click="fold"></i>
+          <i class="las la-expand" @click="fullScreenFold(0)"></i>
+          <i class="las la-expand-arrows-alt" @click="fullScreen"></i>
+        </div>
       </div>
     </template>
   </bim-time-line-container>
@@ -111,10 +118,10 @@ onMounted(() => {
   // 配置地图选项
   const mapOptions = {
     basemaps: [{ name: "天地图", type: "tdt", layer: "img_d", show: true }],
-    control: {
-      animation: true,
-      timeline: true,
-    },
+    // control: {
+    //   animation: true,
+    //   timeline: true,
+    // },
   };
 
   // 创建地图实例
@@ -376,6 +383,19 @@ const pause = (): void => {
 const reset = (): void => {
   timeLineContainer.value?.reset();
 };
+
+const fullScreen = () => {
+  timeLineContainer.value?.fullScreen();
+};
+
+const fullScreenFold = () => {
+  timeLineContainer.value?.fullScreen(0);
+  timeLineContainer.value?.fold(0);
+};
+
+const fold = () => {
+  timeLineContainer.value?.fold();
+};
 </script>
 
 <style>
@@ -396,6 +416,7 @@ body .mars3d-container {
   align-items: center;
   height: 100%;
   padding: 0 10px;
+  justify-content: space-between;
 }
 
 .header-btn i {
