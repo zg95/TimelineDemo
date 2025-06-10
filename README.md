@@ -244,6 +244,7 @@ body .mars3d-container {
 
 <div align="center">
 
-**Made with ❤️ by Your Name**
+有什么问题请提 issue，或者加微信：18971126088
+![wechat](URL_ADDRESS![wechat](https://github.com/CHBIM/CHBIM/blob/main/wechat.png)
 
 </div>
