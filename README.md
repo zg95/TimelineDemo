@@ -5,8 +5,12 @@
 ![Vue](https://img.shields.io/badge/Vue-3.x-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-4.x-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)
+[![npm](https://img.shields.io/npm/v/chbim-time-axis.svg?style=flat-square)](https://www.npmjs.com/package/chbim-time-axis)
+[![npm](https://img.shields.io/npm/dt/chbim-time-axis.svg?style=flat-square)](https://www.npmjs.com/package/chbim-time-axis)
 
 一个基于 Vue 3 + TypeScript 开发的时间轴组件，支持任务管理、时间轴播放等功能。
+
+[📦 插件地址](https://www.npmjs.com/package/chbim-time-axis) | [📚 使用文档](#使用示例)
 
 </div>
 
