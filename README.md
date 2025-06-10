@@ -272,7 +272,6 @@ body .mars3d-container {
 ---
 
 <div align="center">
-此模板示例使用的是<a href="https://www.npmjs.com/package/mars3d">mars3d</a>搭建
+此模板示例使用的是<a href="https://www.npmjs.com/package/mars3d">mars3d</a>搭建<br>
 有什么问题请提 issue，或者加微信：astronauts_in_space，欢迎交流。
-
 </div>
