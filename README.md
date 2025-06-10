@@ -123,23 +123,6 @@ interface TaskAttr {
 }
 ```
 
-### Position 接口
-
-```typescript
-interface Position {
-  /** 高度 */
-  alt: number;
-  /** 朝向角度 */
-  heading: number;
-  /** 纬度 */
-  lat: number;
-  /** 经度 */
-  lng: number;
-  /** 俯仰角度 */
-  pitch: number;
-}
-```
-
 ## 💡 使用示例
 
 ### 基础用法
