@@ -108,18 +108,7 @@ interface Task {
 
 ```typescript
 interface TaskAttr {
-  /** 任务类型 */
-  type: string;
-  /** 位置信息 */
-  position?: Position;
-  /** 文本内容 */
-  text?: string;
-  /** 模型URL */
-  modelurl?: string;
-  /** 名称 */
-  name?: string;
-  /** 是否显示视图 */
-  view?: boolean;
+  /** 自定义接口属性 */
 }
 ```
 
