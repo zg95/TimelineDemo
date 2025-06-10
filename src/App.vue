@@ -28,6 +28,7 @@
           <i class="las la-play-circle" @click="() => play()"></i>
           <i class="las la-pause-circle" @click="() => pause()"></i>
           <i class="las la-undo-alt" @click="() => reset()"></i>
+          <el-button type="primary" @click="addTask">添加任务</el-button>
         </div>
         <div class="header-btn-r">
           <i class="las la-sort-down" @click="fold"></i>
@@ -339,6 +340,25 @@ const endTask = (): void => {
   console.log("任务结束");
 };
 
+const addTask = (e) => {
+  // 给任务添加附加字段
+  // 测试表单数据
+  const form = {
+    name: "自定义",
+    type: "task",
+    startTime: "2025-01-15 00:00:00",
+    endTime: "2025-07-01 00:00:00",
+    icon: "las la-road",
+    attr: {
+      type: "test",
+      text: "自定义数据",
+    },
+    parentId: ["grouping_1"],
+  };
+
+  timeLineContainer.value?.addTask(form);
+};
+
 // 快速添加任务
 const onQuicklyAddTask = (date: string): void => {
   const form: Task = {
@@ -418,7 +438,14 @@ body .mars3d-container {
   padding: 0 10px;
   justify-content: space-between;
 }
-
+.header-btn-l,
+.header-btn-r {
+  display: flex;
+  align-items: center;
+}
+.header-btn-l button {
+  margin-left: 5px;
+}
 .header-btn i {
   font-size: 30px;
   color: #fff;
