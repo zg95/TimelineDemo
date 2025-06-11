@@ -1,4 +1,4 @@
-# 🕒 Timeline 时间轴组件
+# 🕒 Cesium 时间轴组件
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 [![npm](https://img.shields.io/npm/v/chbim-time-axis.svg?style=flat-square)](https://www.npmjs.com/package/chbim-time-axis)
 [![npm](https://img.shields.io/npm/dt/chbim-time-axis.svg?style=flat-square)](https://www.npmjs.com/package/chbim-time-axis)
 
-一个基于 Vue 3 + TypeScript 开发的时间轴组件，支持任务管理、时间轴播放等功能。
+一个基于 Vue 3 + TypeScript + Cesium 开发的时间轴组件，支持任务管理、时间轴播放等功能。
 
 [📦 插件地址](https://www.npmjs.com/package/chbim-time-axis)
 
